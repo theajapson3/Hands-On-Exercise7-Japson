@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Javascript 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        .form-container {
+            margin-top: 15px;
+        }
+
+        .form-row {
+            margin-bottom: 4px;
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+
+        input {
+            width: 95px;
+            height: 15px;
+        }
+
+        button {
+            margin-top: 5px;
+            margin-right: 3px;
+            padding: 2px 7px;
+        }
+
+        fieldset {
+            width: 620px;
+            margin-top: 15px;
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-left: 155px;
+            margin-top: 0;
+            width: 310px;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 5px;
+            text-align: left;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        .action {
+            white-space: nowrap;
+        }
+
+        .bottom-controls {
+            margin-top: 5px;
+        }
+
+        select {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Javascript Web Output #2</h1>
+
+    <div class="form-container">
+
+        <div class="form-row">
+            <label>First Name:</label>
+            <input type="text" id="firstName">
+        </div>
+
+        <div class="form-row">
+            <label>Middle Name:</label>
+            <input type="text" id="middleName">
+        </div>
+
+        <div class="form-row">
+            <label>Last Name:</label>
+            <input type="text" id="lastName">
+        </div>
+
+        <div class="form-row">
+            <label>Age:</label>
+            <input type="number" id="age">
+        </div>
+
+        <button id="insertBtn">Insert</button>
+        <button id="clearBtn">Clear</button>
+
+    </div>
+
+
+    <fieldset>
+
+        <legend>Records</legend>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="recordTable">
+            </tbody>
+
+        </table>
+
+    </fieldset>
+
+
+    <div class="bottom-controls">
+
+        <button id="clearRecordsBtn">
+            Clear Records
+        </button>
+
+        <label>Sort by:</label>
+
+        <select id="sortBy">
+            <option value="">Please select</option>
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+        </select>
+
+        <select id="sortOrder">
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>
+        </select>
+
+        <button id="saveBtn">
+            Save to Local Storage
+        </button>
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
